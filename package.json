@@ -1,0 +1,18 @@
+{
+  "name": "@pipeworx/mcp-videogames",
+  "version": "1.0.0",
+  "description": "MCP server for free-to-play video game data from FreeToGame",
+  "main": "src/index.ts",
+  "types": "src/index.ts",
+  "files": ["src"],
+  "scripts": {
+    "build": "tsc",
+    "check": "tsc --noEmit"
+  },
+  "keywords": ["mcp", "mcp-server", "model-context-protocol", "pipeworx", "videogames"],
+  "author": "Pipeworx",
+  "license": "MIT",
+  "devDependencies": {
+    "typescript": "^5.0.0"
+  }
+}
