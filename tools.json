@@ -1,0 +1,60 @@
+[
+  {
+    "name": "list_games",
+    "description": "List free-to-play games from FreeToGame, optionally filtered by platform (pc/browser) and category (e.g., mmorpg, shooter, strategy) and sorted by release-date, popularity, or alphabetical. Returns all matching games.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "platform": {
+          "type": "string",
+          "description": "Platform filter: \"pc\", \"browser\", or \"all\" (default \"all\")"
+        },
+        "category": {
+          "type": "string",
+          "description": "Genre/category filter, e.g. \"mmorpg\", \"shooter\", \"strategy\", \"moba\", \"racing\", \"sports\", \"social\", \"sandbox\", \"open-world\", \"survival\", \"pvp\", \"pve\", \"pixel\", \"voxel\", \"zombie\", \"turn-based\", \"first-person\", \"third-person\", \"top-down\", \"tower-defense\", \"horror\", \"mmofps\""
+        },
+        "sort_by": {
+          "type": "string",
+          "description": "Sort order: \"release-date\", \"popularity\", \"alphabetical\", or \"relevance\""
+        }
+      },
+      "required": []
+    }
+  },
+  {
+    "name": "get_game",
+    "description": "Get full details for a free-to-play game by its FreeToGame ID. Returns title, description, genre, platform, publisher, developer, release date, screenshots, and minimum system requirements.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "number",
+          "description": "FreeToGame game ID (e.g. 452 for \"Valorant\")"
+        }
+      },
+      "required": [
+        "id"
+      ]
+    }
+  },
+  {
+    "name": "filter_games",
+    "description": "Filter free-to-play games on FreeToGame by a dot-separated tag combination (e.g., \"3d.mmorpg.fantasy\", \"shooter.pvp\") and optional platform (pc/browser). Returns matching games with title, genre, platform, and release date.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "tag": {
+          "type": "string",
+          "description": "Dot-separated tag filter, e.g. \"3d.mmorpg.fantasy\", \"shooter.pvp\", \"browser.strategy\""
+        },
+        "platform": {
+          "type": "string",
+          "description": "Optional platform filter: \"pc\" or \"browser\""
+        }
+      },
+      "required": [
+        "tag"
+      ]
+    }
+  }
+]

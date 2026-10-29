@@ -1,12 +1,20 @@
 {
   "name": "@pipeworx/mcp-videogames",
-  "version": "1.0.2",
+  "version": "1.1.0",
   "description": "Videogames MCP — wraps Free-to-Play Games API (freetogame.com, free, no auth)",
   "type": "module",
-  "main": "src/index.ts",
-  "types": "src/index.ts",
+  "main": "lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./tools.json": "./tools.json",
+    "./package.json": "./package.json"
+  },
   "bin": {
     "mcp-videogames": "bin/cli.js"
+  },
+  "files": ["bin/", "lib/", "tools.json", "server.json"],
+  "engines": {
+    "node": ">=18"
   },
   "keywords": ["mcp", "mcp-server", "model-context-protocol", "pipeworx", "videogames"],
   "license": "MIT",
@@ -14,19 +22,12 @@
     "type": "git",
     "url": "git+https://github.com/pipeworx-io/mcp-videogames.git"
   },
-  "scripts": {
-    "typecheck": "tsc --noEmit"
-  },
-  "dependencies": {
-    "@modelcontextprotocol/sdk": "^1.30.0",
-    "tsx": "^4.19.0"
-  },
-  "devDependencies": {
-    "typescript": "^5.9.3",
-    "@cloudflare/workers-types": "^4.20260405.1"
-  },
+  "mcpName": "io.github.pipeworx-io/videogames",
   "pipeworx": {
-    "sourceHash": "v1-aa82ea37e2d620412044c3a1882679325cc5904e086953477313d6446b4d996c",
-    "sourceCommit": "2cb50b368da3267446f2b6f6a3ddbd3d0eed3d73"
+    "mode": "gateway",
+    "slug": "videogames",
+    "gatewaySlug": "videogames",
+    "sourceHash": "v1-0ad2687a3ecfc34b242020f01a6363fe4dfd82007089ee2c410600167de10ca2",
+    "sourceCommit": "98853f34516646cb7c4c1460f09249b262c0269e"
   }
 }
