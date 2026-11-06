@@ -1,6 +1,6 @@
 {
   "name": "@pipeworx/mcp-videogames",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "Videogames MCP — wraps Free-to-Play Games API (freetogame.com, free, no auth)",
   "type": "module",
   "main": "lib/index.js",
@@ -27,7 +27,7 @@
     "mode": "gateway",
     "slug": "videogames",
     "gatewaySlug": "videogames",
-    "sourceHash": "v1-0ad2687a3ecfc34b242020f01a6363fe4dfd82007089ee2c410600167de10ca2",
-    "sourceCommit": "98853f34516646cb7c4c1460f09249b262c0269e"
+    "sourceHash": "v1-23962a6a64cad9a246932e9ae8ac6a23f98b632f304d050ec661911a446b0827",
+    "sourceCommit": "ca52e7ed1e1ccad897c2da1b0fa105edc0bc3b2e"
   }
 }
